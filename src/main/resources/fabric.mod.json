@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "advsensitivity",
+  "version": "${version}",
+  "name": "advSensitivity",
+  "description": "Allows setting precise mouse sensitivity values via command",
+  "authors": ["sin"],
+  "icon": "assets/icon.png",
+  "contact": {},
+  "license": "Apache-2.0",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "codes.sinister.advsensitivity.client.AdvsensitivityClient"
+    ],
+    "main": [
+      "codes.sinister.advsensitivity.Advsensitivity"
+    ]
+  },
+  "mixins": [
+    "advsensitivity.mixins.json",
+    {
+      "config": "advsensitivity.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "fabric-api": "*",
+    "minecraft": ">=1.20.0",
+    "java": ">=17"
+  }
+}
